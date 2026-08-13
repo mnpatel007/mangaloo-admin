@@ -1,8 +1,8 @@
-# DelhiveryWay Admin Portal 🚀
+# Mangaloo Admin Portal 🚀
 
-**The Command Center for the DelhiveryWay Platform**
+**The Command Center for the Mangaloo Platform**
 
-The DelhiveryWay Admin Portal is a robust, modular administrative interface designed to empower platform managers with complete control over the delivery ecosystem. From real-time order tracking to comprehensive vendor management, this application serves as the central nervous system for operations.
+The Mangaloo Admin Portal is a robust, modular administrative interface designed to empower platform managers with complete control over the delivery ecosystem. From real-time order tracking to comprehensive vendor management, this application serves as the central nervous system for operations.
 
 ## ✨ Key Features
 
@@ -60,14 +60,14 @@ Built with modern web technologies for performance and scalability:
 The codebase follows a strictly modular architecture, ensuring that features are encapsulated and easy to maintain.
 
 ```
-delhiveryway-admin/
+mangaloo-admin/
 ├── .env.development            # Committed, non-secret dev config (see backend README)
 ├── env.example                 # Template for a real .env (production)
 ├── package.json
 ├── public/
 │   ├── index.html
 │   ├── manifest.json
-│   ├── delhiveryway-logo.jpg
+│   ├── mangaloo-logo.jpg
 │   └── robots.txt
 └── src/
     ├── App.js / App.css        # Root component and route definitions
@@ -99,10 +99,10 @@ delhiveryway-admin/
 ## Getting Started
 
 For the complete local development setup — installing WSL, Docker, Node, cloning
-all five DelhiveryWay repos, seeding the database, and running everything
+all five Mangaloo repos, seeding the database, and running everything
 together — see the
-[`backend` repo's README](https://github.com/mnpatel007/delhiveryway-backend#readme).
+[`backend` repo's README](https://github.com/mnpatel007/mangaloo-backend#readme).
 That's the single source of truth for setup; once it's done, come back here and
 run `npm start` in this repo (`http://localhost:3001`).
 
-_© 2025 DelhiveryWay. All rights reserved._
+_© 2025 Mangaloo. All rights reserved._
