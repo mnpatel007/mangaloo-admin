@@ -14,6 +14,7 @@ import NoticesPage from './modules/communication/NoticesPage';
 import TermsAndConditionsPage from './modules/settings/TermsAndConditionsPage';
 import DeliveryDiscountsPage from './modules/settings/DeliveryDiscountsPage';
 import CommissionsPage from './modules/settings/CommissionsPage';
+import ConvenienceChargePage from './modules/settings/ConvenienceChargePage';
 import './App.css';
 
 // Private route component
@@ -30,61 +31,102 @@ function App() {
           <div className="App">
             <Routes>
               <Route path="/login" element={<LoginPage />} />
-              <Route path="/dashboard" element={
-                <PrivateRoute>
-                  <Dashboard />
-                </PrivateRoute>
-              } />
-              <Route path="/shops" element={
-                <PrivateRoute>
-                  <ShopsPage />
-                </PrivateRoute>
-              } />
-              <Route path="/products" element={
-                <PrivateRoute>
-                  <ProductsPage />
-                </PrivateRoute>
-              } />
-              <Route path="/orders" element={
-                <PrivateRoute>
-                  <OrdersPage />
-                </PrivateRoute>
-              } />
-              <Route path="/users" element={
-                <PrivateRoute>
-                  <UsersPage />
-                </PrivateRoute>
-              } />
-              <Route path="/shoppers" element={
-                <PrivateRoute>
-                  <ShoppersPage />
-                </PrivateRoute>
-              } />
-              <Route path="/shopper-performance" element={
-                <PrivateRoute>
-                  <ShopperPerformancePage />
-                </PrivateRoute>
-              } />
-              <Route path="/notices" element={
-                <PrivateRoute>
-                  <NoticesPage />
-                </PrivateRoute>
-              } />
-              <Route path="/terms" element={
-                <PrivateRoute>
-                  <TermsAndConditionsPage />
-                </PrivateRoute>
-              } />
-              <Route path="/delivery-discounts" element={
-                <PrivateRoute>
-                  <DeliveryDiscountsPage />
-                </PrivateRoute>
-              } />
-              <Route path="/commissions" element={
-                <PrivateRoute>
-                  <CommissionsPage />
-                </PrivateRoute>
-              } />
+              <Route
+                path="/dashboard"
+                element={
+                  <PrivateRoute>
+                    <Dashboard />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/shops"
+                element={
+                  <PrivateRoute>
+                    <ShopsPage />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/products"
+                element={
+                  <PrivateRoute>
+                    <ProductsPage />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/orders"
+                element={
+                  <PrivateRoute>
+                    <OrdersPage />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/users"
+                element={
+                  <PrivateRoute>
+                    <UsersPage />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/shoppers"
+                element={
+                  <PrivateRoute>
+                    <ShoppersPage />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/shopper-performance"
+                element={
+                  <PrivateRoute>
+                    <ShopperPerformancePage />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/notices"
+                element={
+                  <PrivateRoute>
+                    <NoticesPage />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/terms"
+                element={
+                  <PrivateRoute>
+                    <TermsAndConditionsPage />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/delivery-discounts"
+                element={
+                  <PrivateRoute>
+                    <DeliveryDiscountsPage />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/commissions"
+                element={
+                  <PrivateRoute>
+                    <CommissionsPage />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/convenience-charge"
+                element={
+                  <PrivateRoute>
+                    <ConvenienceChargePage />
+                  </PrivateRoute>
+                }
+              />
 
               <Route path="/" element={<Navigate to="/dashboard" />} />
             </Routes>
