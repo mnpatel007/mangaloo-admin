@@ -15,6 +15,7 @@ import TermsAndConditionsPage from './modules/settings/TermsAndConditionsPage';
 import DeliveryDiscountsPage from './modules/settings/DeliveryDiscountsPage';
 import CommissionsPage from './modules/settings/CommissionsPage';
 import ConvenienceChargePage from './modules/settings/ConvenienceChargePage';
+import ProfitPage from './modules/settings/ProfitPage';
 import './App.css';
 
 // Private route component
@@ -124,6 +125,14 @@ function App() {
                 element={
                   <PrivateRoute>
                     <ConvenienceChargePage />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/profit"
+                element={
+                  <PrivateRoute>
+                    <ProfitPage />
                   </PrivateRoute>
                 }
               />

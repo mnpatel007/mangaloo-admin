@@ -286,6 +286,9 @@ const Dashboard = () => {
           <Link to="/convenience-charge" className="nav-link">
             🧾 Convenience Charge
           </Link>
+          <Link to="/profit" className="nav-link">
+            📈 Profit
+          </Link>
           <Link to="/terms" className="nav-link">
             📋 Terms & Conditions
           </Link>

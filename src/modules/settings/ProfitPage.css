@@ -1,0 +1,278 @@
+.profit-page {
+  padding: 28px;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.profit-page .page-header-container {
+  margin-bottom: 22px;
+}
+
+.profit-page .back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #64748b;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.profit-page .back-link:hover {
+  color: #0f172a;
+}
+
+.profit-page .page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.profit-page .page-header h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.view-mode-toggle {
+  display: inline-flex;
+  background: #f1f5f9;
+  border-radius: 10px;
+  padding: 4px;
+  gap: 4px;
+}
+
+.view-mode-toggle .toggle-btn {
+  border: 0;
+  background: transparent;
+  padding: 7px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 13px;
+  color: #64748b;
+  cursor: pointer;
+}
+
+.view-mode-toggle .toggle-btn.active {
+  background: #fff;
+  color: #0f172a;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.12);
+}
+
+.profit-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+  border: 1px solid #a7f3d0;
+  border-radius: 16px;
+  padding: 22px 24px;
+  margin-bottom: 16px;
+}
+
+.ph-label {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #047857;
+}
+
+.ph-value {
+  font-size: 38px;
+  font-weight: 800;
+  color: #064e3b;
+  line-height: 1.1;
+}
+
+.ph-meta {
+  font-size: 13px;
+  color: #047857;
+}
+
+.profit-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.profit-stats .stat-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.profit-stats .label {
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #64748b;
+}
+
+.profit-stats .value {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.profit-stats .sub {
+  font-size: 12.5px;
+  color: #64748b;
+}
+
+.profit-stats .sub a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.profit-stats .sub a:hover {
+  text-decoration: underline;
+}
+
+.profit-table-wrap {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.ptw-head {
+  padding: 16px 18px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.ptw-head h2 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.profit-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.profit-table th,
+.profit-table td {
+  padding: 12px 18px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.profit-table th {
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #64748b;
+  background: #f8fafc;
+}
+
+.profit-table td.num,
+.profit-table th.num {
+  text-align: right;
+}
+
+.profit-table td.strong {
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.profit-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.profit-empty {
+  padding: 34px 18px;
+  text-align: center;
+  color: #64748b;
+}
+
+.profit-empty h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  color: #0f172a;
+}
+
+.profit-empty p {
+  margin: 0 auto;
+  max-width: 460px;
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+
+.profit-note {
+  margin-top: 16px;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: #64748b;
+}
+
+.profit-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+  padding: 12px 15px;
+  border-radius: 11px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.profit-page.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 45vh;
+  color: #64748b;
+}
+
+.profit-page .spinner {
+  width: 34px;
+  height: 34px;
+  border: 3px solid #e2e8f0;
+  border-top-color: #10b981;
+  border-radius: 50%;
+  animation: profit-spin 0.8s linear infinite;
+  margin-bottom: 12px;
+}
+
+@keyframes profit-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 720px) {
+  .profit-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .profit-page {
+    padding: 18px 14px;
+  }
+  .ph-value {
+    font-size: 30px;
+  }
+  .profit-table th,
+  .profit-table td {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+}
