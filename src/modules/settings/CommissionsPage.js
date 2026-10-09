@@ -98,17 +98,22 @@ const CommissionsPage = () => {
     return date.toLocaleString('default', { month: 'long' });
   };
 
+  // Day buckets arrive as 'YYYY-MM-DD' already in IST. Comparing them against
+  // a UTC "today", or parsing them with new Date(), shifts the label by a day
+  // for admins west of UTC, so do both in IST.
   const formatDate = (dateStr) => {
     if (!dateStr) return '';
-    const date = new Date(dateStr);
-    const today = new Date();
-    const yesterday = new Date();
-    yesterday.setDate(today.getDate() - 1);
+    const IST_OFFSET = 5.5 * 60 * 60 * 1000;
+    const istDay = (ms) => new Date(ms + IST_OFFSET).toISOString().split('T')[0];
 
-    if (dateStr === today.toISOString().split('T')[0]) return 'Today';
-    if (dateStr === yesterday.toISOString().split('T')[0]) return 'Yesterday';
+    if (dateStr === istDay(Date.now())) return 'Today';
+    if (dateStr === istDay(Date.now() - 24 * 60 * 60 * 1000)) return 'Yesterday';
 
-    return date.toLocaleDateString('en-IN', { day: 'numeric', month: 'short' });
+    const [y, m, d] = dateStr.split('-').map(Number);
+    return new Date(y, m - 1, d).toLocaleDateString('en-IN', {
+      day: 'numeric',
+      month: 'short',
+    });
   };
 
   if (loading) {

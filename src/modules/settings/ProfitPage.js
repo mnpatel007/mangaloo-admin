@@ -44,11 +44,27 @@ const ProfitPage = () => {
     return d.toLocaleString('default', { month: 'long' });
   };
 
+  // The business runs on IST, so render timestamps in IST no matter where
+  // the admin is sitting.
   const prettyDate = (iso) => {
     if (!iso) return null;
     return new Date(iso).toLocaleDateString('en-IN', {
       day: 'numeric',
       month: 'long',
+      year: 'numeric',
+      timeZone: 'Asia/Kolkata',
+    });
+  };
+
+  // The API sends day buckets as 'YYYY-MM-DD' already in IST. Passing that to
+  // new Date() would read it as UTC midnight, which renders as the previous
+  // day for anyone west of UTC, so build the date from its own parts.
+  const dayLabel = (ymd) => {
+    if (!ymd) return '';
+    const [y, m, d] = ymd.split('-').map(Number);
+    return new Date(y, m - 1, d).toLocaleDateString('en-IN', {
+      day: 'numeric',
+      month: 'short',
       year: 'numeric',
     });
   };
@@ -153,13 +169,7 @@ const ProfitPage = () => {
                   {rows.map((r) => (
                     <tr key={view === 'monthly' ? r.year + '-' + r.month : r.date}>
                       <td>
-                        {view === 'monthly'
-                          ? monthName(r.month) + ' ' + r.year
-                          : new Date(r.date).toLocaleDateString('en-IN', {
-                              day: 'numeric',
-                              month: 'short',
-                              year: 'numeric',
-                            })}
+                        {view === 'monthly' ? monthName(r.month) + ' ' + r.year : dayLabel(r.date)}
                       </td>
                       <td className="num">{r.orders}</td>
                       <td className="num strong">{money(r.earned)}</td>
